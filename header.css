@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    background: #40513B;
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* Nav Bar */
+header {
+    background: #9DC08B;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    position: fixed;
+    width: 100%;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: left;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 40px;
+
+    position: relative;
+}
+
+nav li a {
+    color: #40513B;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* Laptop button highlight */
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    top: 0px;
+    left: 0px;
+    background-color: #40513B;
+
+    position: absolute;
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.mobile {
+    float: right;
+    margin-right: 30%;
+}
+
+/* Mobile drop down highlight */
+nav div a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    top: 0px;
+    left: 0px;
+    background-color: #40513B;
+    opacity: 20%;
+
+    /* position: absolute; */
+
+    transition: all ease-in-out 200ms;
+}
+
+nav .link_2::before {
+    top: 42px;
+}
+
+nav .link_3::before {
+    top: 84px;
+}
+
+nav .link_4::before {
+    top: 126px;
+}
+
+nav .link_1:hover::before {
+    padding: 18px;
+    width: 79%;
+
+}
+
+nav .link_2:hover::before {
+    top: 42px;
+    padding: 18px;
+    width: 79%;
+    color: azure;
+}
+
+nav .link_3:hover::before {
+    top: 84px;
+    padding: 18px;
+    width: 79%;
+}
+
+nav .link_4:hover::before {
+    top: 126px;
+    padding: 18px;
+    width: 79%;
+}
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    display: none;
+    background-color: #609966;
+    color: #EDF1D6;
+    padding: 15px 25px 15px 25px;
+    margin-top: 20px ;
+    font-size: 30px;
+    border: none;
+    border-radius: 55px;
+    transition: .3s;
+    position: fixed;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.mobile {
+    position: relative;
+    display: inline-flex;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9DC08B;
+    margin-top: 100%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: #000000;
+}
+
+/* Show the dropdown menu on hover */
+.mobile:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropbtn::before {
+    transition: all ease-in-out 200ms;
+}
+
+.mobile:hover .dropbtn {
+    background-color: #EDF1D6;
+    color: #9DC08B;
+}
+
+@media screen and (max-width: 1115px) {
+    .dropbtn {
+        display: block;
+    }
+
+    .laptop {
+        display: none;
+    }
+}
+
+/* @media screen and (min-width: 1115px) {
+    .mobile {
+        display: none;
+    }
+
+    .laptop {
+        display: inline-block;
+    }
+} */
+
+/* Image shadow */
+.box {
+    cursor: pointer;
+    float: left;
+    transition: box-shadow .5s;
+    width: 150px;
+    /*  height: 500px; */
+    margin-left: -50px;
+    border-radius: 40px;
+    border: 1px solid #40513B;
+    background: #fff;
+    float: left;
+
+}
+
+.box:hover {
+    box-shadow: 0 0 21px rgba(33, 33, 33, .5);
+}
